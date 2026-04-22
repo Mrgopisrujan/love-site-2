@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Deepak ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: black;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            margin-top: 80px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #message {
+            display: none;
+            margin-top: 30px;
+            font-size: 22px;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 12px;
+        }
+
+        .heart {
+            position: absolute;
+            color: red;
+            animation: float 5s linear infinite;
+        }
+
+        @keyframes float {
+            from { transform: translateY(100vh); }
+            to { transform: translateY(-10vh); }
+        }
+    </style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+    <source src="song.mp3" type="audio/mp3">
+</audio>
+
+<div class="container">
+    <h1>Hey Deepak ❤️</h1>
+    <p>I made something just for you...</p>
+
+    <button onclick="startSurprise()">Click me 💖</button>
+
+    <div id="message">
+        <p>From the moment you came into my life,<br>
+        everything started to feel right.</p>
+
+        <p>Your smile makes my darkest days bright,<br>
+        your love feels warm, safe, and light.</p>
+
+        <p>In every heartbeat, in everything I do,<br>
+        somewhere in it… there is always you.</p>
+
+        <p>I may not say it every day,<br>
+        but I’m lucky to have you in every way.</p>
+
+        <p>Forever yours,<br>
+        Mounika 💕</p>
+
+        <!-- Photos -->
+        <div>
+            <img src="photo1.jpg">
+            <img src="photo2.jpg">
+        </div>
+    </div>
+</div>
+
+<script>
+function startSurprise() {
+    document.getElementById("message").style.display = "block";
+    document.getElementById("music").play();
+
+    for (let i = 0; i < 25; i++) {
+        let heart = document.createElement("div");
+        heart.innerHTML = "❤️";
+        heart.className = "heart";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (20 + Math.random() * 20) + "px";
+        document.body.appendChild(heart);
+    }
+}
+</script>
+
+</body>
+</html>
